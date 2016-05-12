@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="1dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/recent_item_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contact"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <RelativeLayout
+            android:id="@+id/item_desc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/recent_item_pic">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Unknown"
+                android:textColor="#3e3e3e"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/contact_name"
+                android:layout_below="@id/contact_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black_opaque_30"
+                android:textSize="@dimen/text_small" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/chkSelcected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="15dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+</FrameLayout>
